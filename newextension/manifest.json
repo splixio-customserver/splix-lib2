@@ -1,0 +1,23 @@
+{
+	"manifest_version": 2,
+	"name": "Splix.io Extension",
+	"version": "1.0",
+	"author": "person4268",
+	"browser_action": {
+		"default_popup": "popup.html"
+	},
+	"permissions": [
+		"storage"
+	],
+	"content_scripts": [
+		{
+			"matches": ["*://splix.io/*"],
+			"js": ["content.js"]
+		}
+	],
+
+	"web_accessible_resources": [
+		"debug.js",
+		"override.js"
+	]
+}
