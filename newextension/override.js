@@ -10,6 +10,6 @@ console.log("Ip address is", targetIp);
 let interval = setInterval(()=>{
 	if(getServer) {
 		clearInterval(interval);
-		getServer = function(){return {ip: "ws://" + targetIp, ip4: targetIp, ip6: targetIp, ping:0}}
+		getServer = function(){return {ip: targetIp}}
 	}
 }, 100);

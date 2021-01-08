@@ -25,11 +25,13 @@ serverIpApply.addEventListener("click", ()=>{
 		}, ()=>{
 			console.log("Saved, set overrideIp to", serverIpTextBox.value);
 		})
+	} else {
+		alert("Your custom IP needs to start with ws:// or wss://!");
 	}
 })
 
 chrome.storage.local.get(["overrideIp", "enableDebug", "enableIpOverride"], (result)=>{
-	if(result.enableIpOverride !== undefined) enableServerIp.checked = result.enableIpOverride;
-	if(result.enableDebug !== undefined) debugCheckbox.checked = result.enableDebug;
-	if(result.overrideIp !== undefined) serverIpTextBox.value = result.overrideIp;
+	if(result.enableIpOverride !== undefined) { enableServerIp.checked = result.enableIpOverride };
+	if(result.enableDebug !== undefined) { debugCheckbox.checked = result.enableDebug };
+	if(result.overrideIp !== undefined) { serverIpTextBox.value = result.overrideIp };
 });
