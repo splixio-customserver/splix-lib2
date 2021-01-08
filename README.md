@@ -1,2 +1,3 @@
 # splix-lib2
 A rewrite of splixio-protocollib since it sucks, but it helped me reverse and figure out many things. This new project also contains a new, revamped splix.io extension.
+One of the thing I tried to do in protocollib was split the functionality into a library, but I think it's better to not do that, but still maintain a fine line of seperation, so I guess splix-lib2 isn't a very good name because this won't be a library. 
